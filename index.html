@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus App</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="lightMode" id="modeBG">
+        <!-- Timer Element -->
+        <div class="timer">
+          <span class="timer_part timer_part-minutes">00</span>
+          <span class="timer_part">:</span>
+          <span class="timer_part timer_part-seconds">00</span>
+          <button
+            type="button"
+            class="timer_btn timer_btn-control timer_btn-start"
+          >
+            <span class="material-icons"> play_arrow </span>
+          </button>
+          <button type="button" class="timer_btn timer_btn-reset">
+            <span class="material-icons"> restart_alt</span>
+          </button>
+        </div>
+
+        <!-- Mode Toggler  -->
+
+        <div class="modeToggler">
+          <input type="checkbox" id="darkmode-toggle" />
+          <label for="darkmode-toggle">
+            <img
+              src="/Sources/Images/sun-fog-svgrepo-com.svg"
+              alt="sun"
+              class="sun"
+            />
+            <img
+              src="/Sources/Images/moon-stars-svgrepo-com.svg"
+              alt="moon"
+              class="moon"
+            />
+          </label>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="details">
+        <div class="intro">
+          <h1>An online Focous Timer to boost your productivity</h1>
+          <h3>What is Moocuss ???</h3>
+          <p>
+            Moocuss is a customizable focous timer that works on desktop &
+            mobile browser. The aim of this app is to help you focus on any task
+            you are working on, such as study, writing, or coding. This app is
+            inspired by Pomodoro Technique which is a time management method
+            developed by Francesco Cirillo.
+          </p>
+        </div>
+
+        <div class="howTo"><h3>How to use the Pomodoro Timer?</h3></div>
+
+        <div class="features"><h3>Features</h3></div>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
