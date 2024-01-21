@@ -7,6 +7,8 @@ export default class Timer {
       seconds: root.querySelector(".timer_part-seconds"),
       control: root.querySelector(".timer_btn-control"),
       reset: root.querySelector(".timer_btn-reset"),
+      break: root.querySelector(".timer_btn-break"),
+      meditate: root.querySelector(".timer_btn-meditate"),
     };
 
     this.interval = null;
@@ -28,6 +30,16 @@ export default class Timer {
         this.updateInterfaceTime();
         this.start();
       }
+    });
+
+    this.el.break.addEventListener("click", () => {
+      this.remainingSeconds = 300;
+      this.updateInterfaceTime();
+    });
+
+    this.el.meditate.addEventListener("click", () => {
+      this.remainingSeconds = 120;
+      this.updateInterfaceTime();
     });
   }
 
