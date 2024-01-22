@@ -6,9 +6,10 @@ export default class Timer {
       minutes: root.querySelector(".timer_part-minutes"),
       seconds: root.querySelector(".timer_part-seconds"),
       control: root.querySelector(".timer_btn-control"),
-      reset: root.querySelector(".timer_btn-reset"),
+      timer: root.querySelector(".timer_btn-timer"),
       break: root.querySelector(".timer_btn-break"),
       meditate: root.querySelector(".timer_btn-meditate"),
+      pomodoro: root.querySelector(".timer_btn-pomodoro"),
     };
 
     this.interval = null;
@@ -22,7 +23,7 @@ export default class Timer {
       }
     });
 
-    this.el.reset.addEventListener("click", () => {
+    this.el.timer.addEventListener("click", () => {
       const inputMinutes = prompt("Enter no of minutes:");
       if (inputMinutes < 60) {
         this.stop();
@@ -31,6 +32,13 @@ export default class Timer {
         this.start();
       }
     });
+
+    if (this.el.pomodoro) {
+      this.el.pomodoro.addEventListener("click", () => {
+        this.remainingSeconds = 1500;
+        this.updateInterfaceTime();
+      });
+    }
 
     this.el.break.addEventListener("click", () => {
       this.remainingSeconds = 300;
@@ -98,7 +106,7 @@ export default class Timer {
   //   <button type="button" class="timer_btn timer_btn-control timer_btn-start">
   //     <span class="material-icons"> play_arrow </span>
   //   </button>
-  //   <button type="button" class="timer_btn timer_btn-reset">
+  //   <button type="button" class="timer_btn timer_btn-timer">
   //     <span class="material-icons"> restart_alt</span>
   //   </button>
   //   `;

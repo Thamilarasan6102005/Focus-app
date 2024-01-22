@@ -14,7 +14,46 @@ body {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 30px;
+
+  /* opacity: 0.2; */
   /* background: white; */
+}
+
+.timerLightTheme {
+  background: linear-gradient(
+      rgba(186, 186, 186, 0.7),
+      rgba(186, 186, 186, 0.7)
+    ),
+    url("/Sources/Images/timer_bg.jpg");
+  background-size: 100% 100%;
+}
+
+.timerDarkTheme {
+  background: linear-gradient(rgba(23, 23, 23, 0.7), rgba(23, 23, 23, 0.7)),
+    url("/Sources/Images/timer_bg.jpg");
+  background-size: 100% 100%;
+}
+
+.timeLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  opacity: 1;
+  font-weight: bolder;
+}
+
+.timerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.material-icons {
+  width: 24px;
+  height: 24px;
 }
 
 .timer_part {
@@ -31,6 +70,18 @@ body {
   color: white;
   background: #8208e6;
   cursor: pointer;
+}
+
+.timer_btn-pomodoro {
+  background-color: #d8860b;
+}
+
+.timer_btn-break {
+  background-color: aqua;
+}
+
+.timer_btn-meditate {
+  background-color: greenyellow;
 }
 
 .timer_btn-start {

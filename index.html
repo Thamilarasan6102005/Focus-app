@@ -14,25 +14,40 @@
     <div class="container">
       <div class="lightMode" id="modeBG">
         <!-- Timer Element -->
-        <div class="timer">
-          <span class="timer_part timer_part-minutes">00</span>
-          <span class="timer_part">:</span>
-          <span class="timer_part timer_part-seconds">00</span>
-          <button
-            type="button"
-            class="timer_btn timer_btn-control timer_btn-start"
-          >
-            <span class="material-icons"> play_arrow </span>
-          </button>
-          <button type="button" class="timer_btn timer_btn-reset">
-            <span class="material-icons"> restart_alt</span>
-          </button>
-          <button type="button" class="timer_btn timer_btn-break">
-            <span class="material-icons"> local_cafe </span>
-          </button>
-          <button type="button" class="timer_btn timer_btn-meditate">
-            <span class="material-icons"> self_improvement </span>
-          </button>
+        <div class="timer timerLightTheme" id="timer">
+          <div class="transbox">
+            <div class="timeLeft">
+              <span class="timer_part timer_part-minutes">00</span>
+              <span class="timer_part">:</span>
+              <span class="timer_part timer_part-seconds">00</span>
+            </div>
+            <div class="timerButtons">
+              <button
+                type="button"
+                class="timer_btn timer_btn-control timer_btn-start"
+              >
+                <span class="material-icons"> play_arrow </span>
+              </button>
+              <button type="button" class="timer_btn timer_btn-pomodoro">
+                <span class="material-icons">
+                  <img
+                    src="/Sources/Images/pomodoro.png"
+                    class="material-icons"
+                    alt="25mins"
+                  />
+                </span>
+              </button>
+              <button type="button" class="timer_btn timer_btn-break">
+                <span class="material-icons"> local_cafe </span>
+              </button>
+              <button type="button" class="timer_btn timer_btn-meditate">
+                <span class="material-icons"> self_improvement </span>
+              </button>
+              <button type="button" class="timer_btn timer_btn-timer">
+                <span class="material-icons"> timer</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Mode Toggler  -->
