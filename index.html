@@ -17,28 +17,35 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <header>
+      <!-- Mode Toggler  -->
+      <div class="modeToggler">
+        <input type="checkbox" class="darkModeCheckBox" id="darkmode-toggle" />
+        <label for="darkmode-toggle">
+          <img
+            src="/Sources/Images/sun-fog-svgrepo-com.svg"
+            alt="sun"
+            class="sun"
+          />
+          <img
+            src="/Sources/Images/moon-stars-svgrepo-com.svg"
+            alt="moon"
+            class="moon"
+          />
+        </label>
+      </div>
+    </header>
     <div class="container">
       <div class="darkMode" id="modeBG">
         <!-- Notes Taker -->
-        <div class="downloadContainer">
+        <div class="downloadContainer textAreaDark" id="downloadContainer">
           <p>Enter the file content:-</p>
-          <textarea class="download-area textAreaDark" id="downloadContainer">
+          <textarea class="download-area textAreaDark" id="downloadTextArea">
           </textarea>
           <br />
           <button onclick="downloadFile()" class="download-btn">
             <i class="fa fa-download"></i> Download
           </button>
-          <script>
-            const downloadFile = () => {
-              const link = document.createElement("a");
-              const content = document.querySelector("textarea").value;
-              const file = new Blob([content], { type: "text/plain" });
-              link.href = URL.createObjectURL(file);
-              link.download = "sample.txt";
-              link.click();
-              URL.revokeObjectURL(link.href);
-            };
-          </script>
         </div>
 
         <!-- Timer Element -->
@@ -90,31 +97,21 @@
           </div>
         </div>
 
-        <!-- Mode Toggler  -->
-
-        <div class="modeToggler">
-          <input type="checkbox" id="darkmode-toggle" />
-          <label for="darkmode-toggle">
-            <img
-              src="/Sources/Images/sun-fog-svgrepo-com.svg"
-              alt="sun"
-              class="sun"
+        <!-- TODO -->
+        <div class="todo-app todoDarkTheme" id="todo-app">
+          <h2>To-Do List <img src="/Sources/Images/icon.png" /></h2>
+          <div class="todoRow">
+            <input
+              type="text"
+              class="todo-input-box"
+              id="todo-input-box"
+              placeholder="Add your text"
             />
-            <img
-              src="/Sources/Images/moon-stars-svgrepo-com.svg"
-              alt="moon"
-              class="moon"
-            />
-          </label>
-        </div>
-        <div class="todo-app">
-          <h2>To-Do List <img src="New folder/icon.png"></h2>
-          <div class="row">
-              <input type="text" id="input-box" placeholder="Add your text">
-              <button onclick="addTask()">Add</button>
+            <button onclick="addTask()" class="todoButton">Add</button>
+            <div></div>
           </div>
-          <ul id="list-container"></ul>
-      </div>
+          <ul id="todo-list-container"></ul>
+        </div>
       </div>
 
       <!-- Description -->
@@ -190,7 +187,8 @@
         <div class="features"><h3>Features</h3></div>
       </div>
     </div>
-
     <script src="main.js" type="module"></script>
+    <script src="/todo.js"></script>
+    <script src="/notes.js"></script>
   </body>
 </html>

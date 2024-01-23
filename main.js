@@ -1,7 +1,9 @@
 const toggler = document.getElementById("darkmode-toggle");
 const mode = document.getElementById("modeBG");
 const timer = document.getElementById("timer");
-const textArea = document.getElementById("downloadContainer");
+const textArea = document.getElementById("downloadTextArea");
+const todo = document.getElementById("todo-app");
+const downloadContainer = document.getElementById("downloadContainer");
 
 // Dark Mode
 
@@ -14,7 +16,11 @@ toggler.addEventListener("click", function onClick(event) {
   timer.classList.toggle("timerDarkTheme");
   timer.classList.toggle("timerLightTheme");
   textArea.classList.toggle("textAreaDark");
-  textArea.classList.toggle("textAreaDarklight");
+  textArea.classList.toggle("textAreaLight");
+  downloadContainer.classList.toggle("textAreaDark");
+  downloadContainer.classList.toggle("textAreaLight");
+  todo.classList.toggle("todoDarkTheme");
+  todo.classList.toggle("todoLightTheme");
 });
 
 // Timer
@@ -151,39 +157,5 @@ class Timer {
 
 // import Timer from "./timer.js";
 new Timer(document.querySelector(".timer"));
+
 //todo list;
-const inputbox=document.getElementById("input-box");
- const listcontainer=document.getElementById("list-container");
- function addTask(){
-    if(inputbox.value===''){
-        alert("You must write something!");
-    }
-    else{
-        let li=document.createElement("li");
-        li.innerHTML=inputbox.value;
-        listcontainer.appendChild(li);
-        let span=document.createElement("span");
-        span.innerHTML="\u00d7";
-        li.appendChild(span);
-    }
-    inputbox.value="";
-    saveData();
- }
- listcontainer.addEventListener("click",function(e)
- {
-    if(e.target.tagName==="LI"){
-        e.target.classList.toggle("checked");
-        saveData();
-    }
-    else if(e.target.tagName==="SPAN"){
-       e.target.parentElement.remove();
-       saveData();
-    }
-},false);
-function saveData(){
-    localStorage.setItem("data",listcontainer.innerHTML);
-}
-function showTask(){
-    listcontainer.innerHTML=localStorage.getItem("data");
-}
-showTask();
