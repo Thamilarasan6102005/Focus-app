@@ -8,17 +8,26 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <div class="container">
       <div class="darkMode" id="modeBG">
         <!-- Notes Taker -->
-        <!-- <div>
+        <div class="downloadContainer">
           <p>Enter the file content:-</p>
-          <textarea> </textarea>
+          <textarea class="download-area textAreaDark" id="downloadContainer">
+          </textarea>
           <br />
-          <button onclick="downloadFile()">Download</button>
+          <button onclick="downloadFile()" class="download-btn">
+            <i class="fa fa-download"></i> Download
+          </button>
           <script>
             const downloadFile = () => {
               const link = document.createElement("a");
@@ -30,7 +39,7 @@
               URL.revokeObjectURL(link.href);
             };
           </script>
-        </div> -->
+        </div>
 
         <!-- Timer Element -->
         <div class="timer timerDarkTheme" id="timer">

@@ -1,6 +1,7 @@
 const toggler = document.getElementById("darkmode-toggle");
 const mode = document.getElementById("modeBG");
 const timer = document.getElementById("timer");
+const textArea = document.getElementById("downloadContainer");
 
 // Dark Mode
 
@@ -12,6 +13,8 @@ toggler.addEventListener("click", function onClick(event) {
   mode.classList.toggle("lightMode");
   timer.classList.toggle("timerDarkTheme");
   timer.classList.toggle("timerLightTheme");
+  textArea.classList.toggle("textAreaDark");
+  textArea.classList.toggle("textAreaDarklight");
 });
 
 // Timer
