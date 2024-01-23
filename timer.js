@@ -1,7 +1,5 @@
 export default class Timer {
   constructor(root) {
-    // root.innerHTML = Timer.getHTML();
-
     this.el = {
       minutes: root.querySelector(".timer_part-minutes"),
       seconds: root.querySelector(".timer_part-seconds"),
@@ -97,18 +95,4 @@ export default class Timer {
     this.interval = null;
     this.updateInterfaceControls();
   }
-
-  // static getHTML() {
-  //   return `
-  //   <span class="timer_part timer_part-minutes">00</span>
-  //   <span class="timer_part">:</span>
-  //   <span class="timer_part timer_part-seconds">00</span>
-  //   <button type="button" class="timer_btn timer_btn-control timer_btn-start">
-  //     <span class="material-icons"> play_arrow </span>
-  //   </button>
-  //   <button type="button" class="timer_btn timer_btn-timer">
-  //     <span class="material-icons"> restart_alt</span>
-  //   </button>
-  //   `;
-  // }
 }

@@ -117,7 +117,7 @@ label {
   height: 100%;
   position: relative;
   display: block;
-  background: #ebebeb;
+  background: #242424;
   border-radius: 200px;
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
     inset 0px -5px 15px rgba(255, 255, 255, 0.4);
@@ -141,7 +141,7 @@ input {
   visibility: hidden;
 }
 input:checked + label {
-  background: #242424;
+  background: #ebebeb;
 }
 input:checked + label:after {
   left: 10px;
@@ -163,6 +163,18 @@ label:active:after {
 .darkMode {
   background: #242424;
   color: #d8860b;
+}
+
+.pomoMode {
+  background-color: #ffbd5a;
+}
+
+.breakMode {
+  background-color: rgb(81, 255, 255);
+}
+
+.mediMode {
+  background-color: rgb(200, 255, 117);
 }
 
 label img {
@@ -189,10 +201,46 @@ input:checked + label img.moon {
 }
 
 /* Details */
+
+.h3 {
+  font-size: 20px;
+}
+
 .details {
   margin: 20px auto;
   padding: 20px;
   width: 70%;
   height: auto;
-  background-color: aqua;
+  background-color: wheat;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+dl {
+  padding: 0.5em;
+  width: fit-content;
+}
+
+dt {
+  width: fit-content;
+  text-align: right;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+.paragraph {
+  font-family: sans-serif;
+  font-size: 16px;
+  /* padding-bottom: 15px; */
 }

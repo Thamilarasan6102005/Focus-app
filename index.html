@@ -12,9 +12,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="lightMode" id="modeBG">
+      <div class="darkMode" id="modeBG">
+        <!-- Notes Taker -->
+        <!-- <div>
+          <p>Enter the file content:-</p>
+          <textarea> </textarea>
+          <br />
+          <button onclick="downloadFile()">Download</button>
+          <script>
+            const downloadFile = () => {
+              const link = document.createElement("a");
+              const content = document.querySelector("textarea").value;
+              const file = new Blob([content], { type: "text/plain" });
+              link.href = URL.createObjectURL(file);
+              link.download = "sample.txt";
+              link.click();
+              URL.revokeObjectURL(link.href);
+            };
+          </script>
+        </div> -->
+
         <!-- Timer Element -->
-        <div class="timer timerLightTheme" id="timer">
+        <div class="timer timerDarkTheme" id="timer">
           <div class="transbox">
             <div class="timeLeft">
               <span class="timer_part timer_part-minutes">00</span>
@@ -28,7 +47,11 @@
               >
                 <span class="material-icons"> play_arrow </span>
               </button>
-              <button type="button" class="timer_btn timer_btn-pomodoro">
+              <button
+                type="button"
+                class="timer_btn timer_btn-pomodoro"
+                id="timer_btn-pomodoro"
+              >
                 <span class="material-icons">
                   <img
                     src="/Sources/Images/pomodoro.png"
@@ -37,10 +60,18 @@
                   />
                 </span>
               </button>
-              <button type="button" class="timer_btn timer_btn-break">
+              <button
+                type="button"
+                class="timer_btn timer_btn-break"
+                id="timer_btn-break"
+              >
                 <span class="material-icons"> local_cafe </span>
               </button>
-              <button type="button" class="timer_btn timer_btn-meditate">
+              <button
+                type="button"
+                class="timer_btn timer_btn-meditate"
+                id="timer_btn-meditate"
+              >
                 <span class="material-icons"> self_improvement </span>
               </button>
               <button type="button" class="timer_btn timer_btn-timer">
@@ -74,16 +105,70 @@
         <div class="intro">
           <h1>An online Focous Timer to boost your productivity</h1>
           <h3>What is Moocuss ???</h3>
-          <p>
+          <div class="paragraph">
             Moocuss is a customizable focous timer that works on desktop &
             mobile browser. The aim of this app is to help you focus on any task
             you are working on, such as study, writing, or coding. This app is
             inspired by Pomodoro Technique which is a time management method
             developed by Francesco Cirillo.
-          </p>
+          </div>
         </div>
 
-        <div class="howTo"><h3>How to use the Pomodoro Timer?</h3></div>
+        <div class="pomoIntro">
+          <h3>
+            What is
+            <a
+              href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
+              target="_blank"
+              >Pomodoro</a
+            >
+            Technique?
+          </h3>
+          <div class="paragraph">
+            The Pomodoro Technique, developed by Francesco Cirillo in the late
+            1980s, is a time management method that enhances productivity
+            through focused intervals. Named after the Italian word for
+            "tomato," it originated from Cirillo's use of a tomato-shaped
+            kitchen timer. The technique involves breaking work into 25-minute
+            intervals, called "Pomodoros," followed by a short break. After four
+            cycles, take a longer break. The structured approach helps maintain
+            concentration, manage distractions, and prevent burnout. Its
+            simplicity and adaptability have made it popular worldwide, aiding
+            individuals in boosting efficiency and completing tasks with
+            increased concentration and reduced procrastination.
+          </div>
+        </div>
+
+        <div class="howTo">
+          <h3>How to use the Pomodoro Technique?</h3>
+          <dl>
+            <dt>Set a Clear Goal:</dt>
+            <dd>
+              Identify a specific task and define it clearly before starting the
+              Pomodoro session.
+            </dd>
+            <dt>Set the Timer:</dt>
+            <dd>
+              Use a timer, preferably set to 25 minutes (one Pomodoro), to break
+              down your work into focused intervals.
+            </dd>
+            <dt>Work on the Task:</dt>
+            <dd>
+              During the Pomodoro session, concentrate solely on the chosen
+              task, minimizing distractions and interruptions.
+            </dd>
+            <dt>Take a Short Break:</dt>
+            <dd>
+              After completing a Pomodoro, take a 5-minute break to relax and
+              recharge before starting the next focused interval.
+            </dd>
+            <dt>Repeat and Take a Longer Break:</dt>
+            <dd>
+              After four Pomodoros, take a longer break (15-30 minutes) to rest
+              and rejuvenate before beginning a new cycle if necessary.
+            </dd>
+          </dl>
+        </div>
 
         <div class="features"><h3>Features</h3></div>
       </div>
