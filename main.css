@@ -11,14 +11,22 @@ body {
 
 /* Timer */
 .timer {
-  height: 31%;
-  width: 17.8%;
+  width: 20vw;
+  height: 15vw;
   font-family: sans-serif;
   display: flex;
   padding: 14px 32px;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.transBox {
+  position: absolute;
+  top: 20%;
+  height: 90%;
+  width: 90%;
 }
 
 .timerLightTheme {
@@ -51,27 +59,49 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 1;
-}
-
-.material-icons {
-  width: 24px;
-  height: 24px;
-}
-
-.timer_part {
-  font-size: 36px;
-  font-weight: bold;
+  width: 100%;
+  height: 50px;
 }
 
 .timer_btn {
-  width: 50px;
-  height: 50px;
+  /* width: 50px;
+  height: 50px; */
   margin-left: 10px;
   border-radius: 50%;
   border: none;
   color: white;
   background: #8208e6;
   cursor: pointer;
+}
+
+@media screen and (min-width: 801px) {
+  .timer_btn {
+    width: 50px;
+    height: 50px;
+  }
+  .material-icons {
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  .timer_btn {
+    width: 30px;
+    height: 30px;
+  }
+  .material-icons {
+    height: 12px;
+    width: 12px;
+    font-size: 12px;
+  }
+}
+
+.timer_part {
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .timer_btn-pomodoro {
@@ -246,156 +276,4 @@ a {
   font-family: sans-serif;
   font-size: 16px;
   /* padding-bottom: 15px; */
-}
-
-/* Download Container */
-
-.downloadContainer {
-  /* position: absolute; */
-  left: 5%;
-  height: 31%;
-  width: 17.8%;
-}
-
-.download-btn {
-  background-color: #8208e6;
-  /* background-color: DodgerBlue; */
-  border: none;
-  color: white;
-  padding: 12px 30px;
-  width: 100%;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.download-area {
-  width: 100%;
-  height: 150px;
-  padding: 12px 12px;
-  box-sizing: border-box;
-  /* border: 2px solid #ccc;
-  border-radius: 4px; */
-  /* background-color: #f8f8f8; */
-  font-size: 16px;
-}
-
-.download-btn:hover {
-  background-color: RoyalBlue;
-}
-
-.textAreaDark {
-  background: #0a0a0a;
-  color: #d8860b;
-}
-
-.textAreaLight {
-  /* border: 2px solid #ccc; */
-  border-radius: 4px;
-  background-color: wheat;
-  color: #242424;
-}
-
-/*todo list*/
-.todo-app {
-  width: auto;
-  padding: 8px 6px 14px;
-  border-radius: 10px;
-}
-
-.todoDarkTheme {
-  background: #0a0a0a;
-}
-
-.todoLightTheme {
-  background: wheat;
-}
-
-.todo-app h2 {
-  color: #002765;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.todo-app h2 img {
-  width: 30px;
-  margin-left: 10px;
-}
-
-.todoRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #edeef0;
-  border-radius: 30px;
-  padding-left: 20px;
-  margin-bottom: 25px;
-}
-
-.todo-input-box {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 10px;
-  font-weight: 14px;
-}
-
-.todoButton {
-  border: none;
-  outline: none;
-  padding: 16px 50px;
-  background: #ff5945;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 40px;
-}
-
-ul li {
-  list-style: none;
-  font-size: 17px;
-  padding: 12px 8px 12px 50px;
-  user-select: none;
-  cursor: pointer;
-  position: relative;
-}
-
-ul li::before {
-  content: "";
-  position: absolute;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background-image: url("/Sources/Images/unchecked.png");
-  background-size: cover;
-  background-position: center;
-  top: 12px;
-  left: 8px;
-}
-
-ul li.checked {
-  color: #555;
-  text-decoration: line-through;
-}
-
-ul li.checked::before {
-  background-image: url("/Sources/Images/checked.png");
-}
-
-ul li span {
-  position: absolute;
-  right: 0;
-  top: 5px;
-  width: 40px;
-  height: 40px;
-  font-size: 22px;
-  color: #555;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-}
-
-ul li span:hover {
-  background: lightgrey;
 }

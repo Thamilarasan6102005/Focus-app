@@ -13,8 +13,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="todo.css" />
+    <link rel="stylesheet" href="notes.css" />
   </head>
   <body>
     <header>
@@ -39,18 +40,19 @@
       <div class="darkMode" id="modeBG">
         <!-- Notes Taker -->
         <div class="downloadContainer textAreaDark" id="downloadContainer">
-          <p>Enter the file content:-</p>
+          <div class="enterNotes">Enter Notes</div class="enterNotes">
           <textarea class="download-area textAreaDark" id="downloadTextArea">
           </textarea>
           <br />
           <button onclick="downloadFile()" class="download-btn">
-            <i class="fa fa-download"></i> Download
+            <i class="fa fa-download"></i>
+            <!-- <div class="downloadText">Download</div> -->
           </button>
         </div>
 
         <!-- Timer Element -->
         <div class="timer timerDarkTheme" id="timer">
-          <div class="transbox">
+          <div class="transBox">
             <div class="timeLeft">
               <span class="timer_part timer_part-minutes">00</span>
               <span class="timer_part">:</span>
@@ -99,7 +101,10 @@
 
         <!-- TODO -->
         <div class="todo-app todoDarkTheme" id="todo-app">
-          <h2>To-Do List <img src="/Sources/Images/icon.png" /></h2>
+          <div class="toDoListHeading">
+            To-Do List 
+            <img class="todoIcon" src="/Sources/Images/icon.png" />
+          </div class="toDoListHeading">
           <div class="todoRow">
             <input
               type="text"

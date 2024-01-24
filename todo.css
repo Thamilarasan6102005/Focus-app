@@ -1,0 +1,212 @@
+/*todo list*/
+.todo-app {
+  height: auto;
+  width: 17.8vw;
+  /* width: auto; */
+  padding: 8px 6px 14px;
+  border-radius: 10px;
+}
+
+.todoDarkTheme {
+  background: #0a0a0a;
+}
+
+.todoLightTheme {
+  background: wheat;
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 801px) {
+  .toDoListHeading {
+    font-size: 28px;
+    padding-bottom: 10px;
+  }
+  .todoIcon {
+    height: 28px;
+    width: 28px;
+  }
+
+  .todoRow {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background: #edeef0;
+    border-radius: 30px;
+    /* padding-left: 20px; */
+    margin-bottom: 25px;
+    width: 90%;
+  }
+
+  .todo-input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    position: absolute;
+  }
+
+  .todoButton {
+    position: relative;
+    left: 60%;
+    border: none;
+    outline: none;
+    padding: 6% 18.75%;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("Sources/Images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+
+  ul li.checked::before {
+    background-image: url("Sources/Images/checked.png");
+  }
+
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  ul li span:hover {
+    background: lightgrey;
+  }
+}
+
+/* If the screen size is 800px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  .toDoListHeading {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  .todoIcon {
+    height: 12px;
+    width: 12px;
+  }
+  .todoRow {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    background: #edeef0;
+    border-radius: 15px;
+    /* padding-left: 20px; */
+    margin-bottom: 5px;
+    width: 90%;
+  }
+
+  .todo-input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    font-weight: 14px;
+    position: absolute;
+    font-size: 8px;
+  }
+
+  .todoButton {
+    position: relative;
+    left: 70%;
+    border: none;
+    outline: none;
+    padding: 3% 9%;
+    background: #ff5945;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  #todo-list-container {
+    padding-left: 0;
+  }
+  ul li {
+    list-style: none;
+    font-size: 8px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-image: url("Sources/Images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+  }
+
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+
+  ul li.checked::before {
+    background-image: url("Sources/Images/checked.png");
+  }
+
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    /* width: 40px;
+    height: 40px; */
+    font-size: 12px;
+    color: #555;
+    /* line-height: 40px; */
+    text-align: center;
+    border-radius: 50%;
+  }
+}
