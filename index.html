@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="notes.css" />
   </head>
   <body>
-    <header>
+    <header class="darkMode">
       <!-- Mode Toggler  -->
       <div class="modeToggler">
         <input type="checkbox" class="darkModeCheckBox" id="darkmode-toggle" />
@@ -39,15 +39,17 @@
     <div class="container">
       <div class="darkMode" id="modeBG">
         <!-- Notes Taker -->
+        <div class="pc">
         <div class="downloadContainer textAreaDark" id="downloadContainer">
-          <div class="enterNotes">Enter Notes</div class="enterNotes">
+          <div class="enterNotes">Enter Notes</div>
           <textarea class="download-area textAreaDark" id="downloadTextArea">
           </textarea>
           <br />
           <button onclick="downloadFile()" class="download-btn">
             <i class="fa fa-download"></i>
-            <!-- <div class="downloadText">Download</div> -->
+            <div class="downloadText">Download</div>
           </button>
+        </div>
         </div>
 
         <!-- Timer Element -->
@@ -117,6 +119,18 @@
           </div>
           <ul id="todo-list-container"></ul>
         </div>
+        <div class="mobile">
+        <div class="downloadContainer textAreaDark" id="downloadContainer">
+          <div class="enterNotes">Enter Notes</div>
+          <textarea class="download-area textAreaDark" id="downloadTextArea">
+          </textarea>
+          <br />
+          <button onclick="downloadFile()" class="download-btn">
+            <i class="fa fa-download"></i>
+            <div class="downloadText">Download</div>
+          </button>
+        </div>
+      </div>
       </div>
 
       <!-- Description -->
@@ -188,7 +202,6 @@
             </dd>
           </dl>
         </div>
-
         <div class="features"><h3>Features</h3></div>
       </div>
     </div>

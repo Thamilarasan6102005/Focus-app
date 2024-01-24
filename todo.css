@@ -1,33 +1,33 @@
 /*todo list*/
-.todo-app {
-  height: auto;
-  width: 17.8vw;
-  /* width: auto; */
-  padding: 8px 6px 14px;
-  border-radius: 10px;
-}
-
-.todoDarkTheme {
-  background: #0a0a0a;
-}
-
-.todoLightTheme {
-  background: wheat;
-}
-
-.todo-app h2 {
-  color: #002765;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.todo-app h2 img {
-  width: 30px;
-  margin-left: 10px;
-}
 
 @media screen and (min-width: 801px) {
+  .todo-app {
+    height: auto;
+    width: 17.8vw;
+    /* width: auto; */
+    padding: 8px 6px 14px;
+    border-radius: 10px;
+  }
+
+  .todoDarkTheme {
+    background: #0a0a0a;
+  }
+
+  .todoLightTheme {
+    background: wheat;
+  }
+
+  .todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+  }
   .toDoListHeading {
     font-size: 28px;
     padding-bottom: 10px;
@@ -121,22 +121,52 @@
 
 /* If the screen size is 800px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
+  .todo-app {
+    height: auto;
+    width: 65vw;
+    padding: 8px 6px 14px;
+    border-radius: 10px;
+    position: static;
+    margin: 20px auto;
+    /* top: 1000px; */
+  }
+
+  .todoDarkTheme {
+    background: #0a0a0a;
+  }
+
+  .todoLightTheme {
+    background: wheat;
+  }
+
+  .todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+  }
   .toDoListHeading {
-    font-size: 12px;
+    font-size: 28px;
     padding-bottom: 10px;
   }
   .todoIcon {
-    height: 12px;
-    width: 12px;
+    height: 28px;
+    width: 28px;
   }
+
   .todoRow {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
     background: #edeef0;
-    border-radius: 15px;
+    border-radius: 30px;
     /* padding-left: 20px; */
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     width: 90%;
   }
 
@@ -145,30 +175,26 @@
     border: none;
     outline: none;
     background: transparent;
-    padding: 5px;
+    padding: 10px;
     font-weight: 14px;
     position: absolute;
-    font-size: 8px;
   }
 
   .todoButton {
     position: relative;
-    left: 70%;
+    left: 60%;
     border: none;
     outline: none;
-    padding: 3% 9%;
+    padding: 6% 18.75%;
     background: #ff5945;
     color: #fff;
-    font-size: 10px;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 10px;
-  }
-  #todo-list-container {
-    padding-left: 0;
+    border-radius: 40px;
   }
   ul li {
     list-style: none;
-    font-size: 8px;
+    font-size: 17px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -178,13 +204,13 @@
   ul li::before {
     content: "";
     position: absolute;
-    height: 14px;
-    width: 14px;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
     background-image: url("Sources/Images/unchecked.png");
     background-size: cover;
     background-position: center;
-    top: 8px;
+    top: 12px;
     left: 8px;
   }
 
@@ -200,13 +226,17 @@
   ul li span {
     position: absolute;
     right: 0;
-    top: 8px;
-    /* width: 40px;
-    height: 40px; */
-    font-size: 12px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
     color: #555;
-    /* line-height: 40px; */
+    line-height: 40px;
     text-align: center;
     border-radius: 50%;
+  }
+
+  ul li span:hover {
+    background: lightgrey;
   }
 }

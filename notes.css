@@ -1,47 +1,42 @@
 /* Download Container */
 
-.downloadContainer {
-  /* position: absolute; */
-  left: 5%;
-  /* height: 31%; */
-  width: 18vw;
-  height: 12vw;
-}
-
-.download-area {
-  width: 100%;
-  height: 100%;
-  padding: 12px 12px;
-  box-sizing: border-box;
-  /* border: 2px solid #ccc;
-    border-radius: 4px; */
-  /* background-color: #f8f8f8; */
-  font-size: 16px;
-}
-
-.download-btn:hover {
-  background-color: RoyalBlue;
-}
-
-.textAreaDark {
-  background: #0a0a0a;
-  color: #d8860b;
-}
-
-.textAreaLight {
-  /* border: 2px solid #ccc; */
-  border-radius: 4px;
-  background-color: wheat;
-  color: #242424;
-}
-
-.downloadText {
-  padding: 0%;
-  font-size: 100%;
-  word-wrap: break-word;
-}
-
 @media screen and (min-width: 801px) {
+  .downloadContainer {
+    left: 5%;
+    /* height: 31%; */
+    width: 18vw;
+    height: 12vw;
+  }
+
+  .download-area {
+    width: 100%;
+    height: 100%;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .download-btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .textAreaDark {
+    background: #0a0a0a;
+    color: #d8860b;
+  }
+
+  .textAreaLight {
+    /* border: 2px solid #ccc; */
+    border-radius: 4px;
+    background-color: wheat;
+    color: #242424;
+  }
+
+  .downloadText {
+    padding: 0%;
+    font-size: 100%;
+    word-wrap: break-word;
+  }
   .download-btn {
     background-color: #8208e6;
     border: none;
@@ -59,6 +54,45 @@
 
 /* If the screen size is 800px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
+  .downloadContainer {
+    left: 5%;
+    /* height: 31%; */
+    width: 70vw;
+    /* height: 12vw; */
+    position: static;
+    /* top: 600px; */
+    margin: auto;
+  }
+
+  .download-area {
+    width: 100%;
+    height: 100%;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .download-btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .textAreaDark {
+    background: #0a0a0a;
+    color: #d8860b;
+  }
+
+  .textAreaLight {
+    /* border: 2px solid #ccc; */
+    border-radius: 4px;
+    background-color: wheat;
+    color: #242424;
+  }
+
+  .downloadText {
+    padding: 0%;
+    font-size: 100%;
+    word-wrap: break-word;
+  }
   .download-btn {
     background-color: #8208e6;
     border: none;

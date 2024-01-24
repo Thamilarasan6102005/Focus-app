@@ -10,23 +10,9 @@ body {
 } */
 
 /* Timer */
-.timer {
-  width: 20vw;
-  height: 15vw;
-  font-family: sans-serif;
-  display: flex;
-  padding: 14px 32px;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 
 .transBox {
   position: absolute;
-  top: 20%;
-  height: 90%;
-  width: 90%;
 }
 
 .timerLightTheme {
@@ -75,6 +61,17 @@ body {
 }
 
 @media screen and (min-width: 801px) {
+  .timer {
+    width: 20vw;
+    height: 15vw;
+    font-family: sans-serif;
+    display: flex;
+    padding: 14px 32px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    /* position: static; */
+  }
   .timer_btn {
     width: 50px;
     height: 50px;
@@ -88,14 +85,29 @@ body {
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 800px) {
+  header {
+    height: 20vh;
+  }
+  .timer {
+    width: 65vw;
+    height: 30vw;
+    font-family: sans-serif;
+    display: flex;
+    padding: 14px 32px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+  }
   .timer_btn {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
   .material-icons {
-    height: 12px;
-    width: 12px;
-    font-size: 12px;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
   }
 }
 
@@ -127,11 +139,7 @@ body {
 /* Mode Toggler */
 
 #modeBG {
-  /* width: 100vw; */
-  height: 100vh;
   z-index: -1;
-  /* position: absolute; */
-  display: flex;
   transition: 0.3s;
   justify-content: space-around;
   align-items: center;
@@ -276,4 +284,26 @@ a {
   font-family: sans-serif;
   font-size: 16px;
   /* padding-bottom: 15px; */
+}
+
+@media screen and (min-width: 801px) {
+  #modeBG {
+    display: flex;
+    height: 100vh;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+/* If the screen size is 800px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 800px) {
+  #modeBG {
+    display: block;
+    height: auto;
+  }
+
+  .pc {
+    display: none;
+  }
 }
