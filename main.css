@@ -17,17 +17,17 @@ body {
 
 .timerLightTheme {
   background: linear-gradient(
-      rgba(186, 186, 186, 0.7),
-      rgba(186, 186, 186, 0.7)
-    ),
-    url("/Sources/Images/timer_bg.jpg");
-  background-size: 100% 100%;
+    rgba(245, 222, 179, 0.9),
+    rgba(245, 222, 179, 0.9)
+  );
+  /* url("/Sources/Images/timer_bg.jpg");
+  background-size: 100% 100%; */
 }
 
 .timerDarkTheme {
-  background: linear-gradient(rgba(23, 23, 23, 0.7), rgba(23, 23, 23, 0.7)),
-    url("/Sources/Images/timer_bg.jpg");
-  background-size: 100% 100%;
+  background: linear-gradient(rgba(23, 23, 23, 0.7), rgba(23, 23, 23, 0.7));
+  /* url("/Sources/Images/timer_bg.jpg");
+  background-size: 100% 100%; */
 }
 
 .timeLeft {
