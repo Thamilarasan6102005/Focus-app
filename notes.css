@@ -17,19 +17,19 @@
   }
 
   .download-btn:hover {
-    background-color: RoyalBlue;
+    background-color: #4169e1; /* color  aligns well with the button */
   }
 
   .textAreaDark {
     background: #0a0a0a;
-    color: #d8860b;
+    color: #f5a623; /* Change from #d8860b (dark orange) to a brighter amber for better readability */
   }
 
   .textAreaLight {
     /* border: 2px solid #ccc; */
     border-radius: 4px;
-    background-color: wheat;
-    color: #242424;
+    background-color: #f5deb3; /* Keep wheat but use a slightly lighter shade for better contrast */
+  color: #222; /* Darker text for improved readability */
   }
 
   .downloadText {
@@ -38,7 +38,7 @@
     word-wrap: break-word;
   }
   .download-btn {
-    background-color: #8208e6;
+    background-color: #6a0dad; /* Change from #8208e6 (bright purple) to a deeper purple for readability */
     border: none;
     color: white;
     padding: 12px 30px;
