@@ -38,6 +38,7 @@ body {
   padding: 10px;
   opacity: 1;
   font-weight: bolder;
+  color: #ffffff; /* Darker shade for better contrast */
 }
 
 .timerButtons {
@@ -56,7 +57,7 @@ body {
   border-radius: 50%;
   border: none;
   color: white;
-  background: #8208e6;
+  background: #6a1b9a; /* A deeper purple for better contrast */
   cursor: pointer;
 }
 
@@ -133,7 +134,7 @@ body {
 }
 
 .timer_btn-stop {
-  background: red;
+  background: #d32f2f; /* A slightly muted red */
 }
 
 /* Mode Toggler */
@@ -203,7 +204,7 @@ label:active:after {
 
 .darkMode {
   background: #242424;
-  color: #d8860b;
+  color: #ffcc80; /* Softer amber for a warm effect */
 }
 
 .pomoMode {
@@ -276,7 +277,7 @@ dd {
 }
 
 a {
-  color: red;
+  color: #c62828; /* Darker red for better visibility */
   text-decoration: none;
 }
 
